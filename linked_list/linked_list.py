@@ -6,7 +6,8 @@ class Node:
         self.next = None
 
     def __repr__(self):
-        return self.data
+        next_repr = repr(self.next.data) if self.next else "None"
+        return f"Node(data={repr(self.data)}, next={next_repr})"
 
 class LinkedList:
     def __init__(self):
